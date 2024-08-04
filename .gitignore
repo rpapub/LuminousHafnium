@@ -1,0 +1,6 @@
+#Ignore .local files without ignoring dataservice object .dlls
+.local/
+!.local/**/*.dll
+
+#Ignore temporary files from unsaved .xaml files
+~*

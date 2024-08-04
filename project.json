@@ -1,0 +1,67 @@
+{
+  "name": "CPRIMA.Utils.Legacy",
+  "projectId": "03440d98-33fc-47f1-ba23-773478697ec4",
+  "description": "This library offers a range of utility functions designed to support UiPath automation projects. ExpressionLanguage VB.NET and targeting the Windows Legacy framework.\r\nLicense: CC-BY\r\nAuthor: Christian Prior-Mamulyan <cprior@gmail.com>\r\nSource: https://github.com/rpapub/LuminousHafnium",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "Microsoft.Activities": "1.0.1",
+    "Microsoft.Activities.Extensions": "2.0.6.9",
+    "Newtonsoft.Json": "13.0.3",
+    "UiPath.Excel.Activities": "2.23.4",
+    "UiPath.Mail.Activities": "1.23.10",
+    "UiPath.MicrosoftOffice365.Activities": "2.2.7",
+    "UiPath.System.Activities": "24.10.3",
+    "UiPath.Testing.Activities": "24.10.1",
+    "UiPath.UIAutomation.Activities": "24.10.2"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.10.5.0",
+  "projectVersion": "0.0.1",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "171e1cf6-6eb6-43a2-89e4-5b0bea22765b",
+        "dataVariationFilePath": ".variations\\UnitTests_Template.json",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\EndToEnd\\TestCase_Template.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}

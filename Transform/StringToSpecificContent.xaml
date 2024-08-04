@@ -1,0 +1,158 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="StringToSpecificContent" this:StringToSpecificContent.in_AdditionalContent="[New Dictionary(Of String, String)()]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_SpecificContent" Type="InArgument(x:String)" />
+    <x:Property Name="in_AdditionalContent" Type="InArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="io_SpecificContent" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>778,1161</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Extensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="StringToSpecificContent" sap:VirtualizedContainerService.HintSize="546,1096" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="IsSuccess">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message INFO begin" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Going to transform string to SpecificContent dictionary of String, Object&quot;]" />
+    <TryCatch DisplayName="Try Catch transform StringToSpecificContent" sap:VirtualizedContainerService.HintSize="484,393" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:String" Name="ErrorMessage" />
+        <Variable x:TypeArguments="scg:Dictionary(x:String, ui:LogLevel)" Name="LogMessages" />
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <ui:InvokeCode ContinueOnError="{x:Null}" Code="/**&#xD;&#xA; * Processes and transforms JSON input into a dictionary with optional additional content handling.&#xD;&#xA; * &#xD;&#xA; * Arguments:&#xD;&#xA; * - in_SpecificContent (string): A JSON string representing the primary content.&#xD;&#xA; * - out_SpecificContent (Dictionary&lt;string, object&gt;): The output dictionary containing deserialized JSON data.&#xD;&#xA; * - in_AdditionalContent (Dictionary&lt;string, string&gt;): An optional dictionary with additional content to be added or updated.&#xD;&#xA; * - out_LogMessages (Dictionary&lt;string, UiPath.Core.Activities.LogLevel&gt;): A dictionary to log messages with corresponding log levels.&#xD;&#xA; * - out_IsSuccess (bool): Boolean flag indicating whether the process completed successfully.&#xD;&#xA; * - out_ErrorMessage (string): Error message captured in case of an exception.&#xD;&#xA; * &#xD;&#xA; * The function performs the following steps:&#xD;&#xA; * 1. Initializes the output log messages dictionary.&#xD;&#xA; * 2. Defines a helper function `UnescapeJsonString` to handle unescaping of JSON strings.&#xD;&#xA; * 3. Unescapes and deserializes the `in_SpecificContent` JSON string into a dictionary.&#xD;&#xA; * 4. Iterates through `in_AdditionalContent` to unescape and attempt deserialization of each value.&#xD;&#xA; * 5. Updates or adds the deserialized values to the main dictionary `out_SpecificContent` based on keys extracted after the dot.&#xD;&#xA; * 6. Logs messages at appropriate log levels for each operation performed.&#xD;&#xA; * 7. Sets the `out_IsSuccess` flag to true if processing completes successfully.&#xD;&#xA; * 8. Catches and logs any exceptions, sets the `out_IsSuccess` flag to false, and assigns the error message to `out_ErrorMessage`.&#xD;&#xA; * &#xD;&#xA; * Example Log Messages:&#xD;&#xA; * - &quot;Successfully deserialized: key&quot; (Info)&#xD;&#xA; * - &quot;Raw value retained: key. Value used as-is.&quot; (Trace)&#xD;&#xA; * - &quot;Updated key: key&quot; (Info)&#xD;&#xA; * - &quot;Added key: key&quot; (Info)&#xD;&#xA; * - &quot;Processing completed successfully.&quot; (Info)&#xD;&#xA; * - &quot;Error: error_message&quot; (Error)&#xD;&#xA; */&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Initialize the output log messages dictionary&#xD;&#xA;out_LogMessages = new Dictionary&lt;string, UiPath.Core.Activities.LogLevel&gt;();&#xD;&#xA;&#xD;&#xA;try&#xD;&#xA;{&#xD;&#xA;    // Initialize the dictionary&#xD;&#xA;    var out_Dictionary = new Dictionary&lt;string, object&gt;();&#xD;&#xA;&#xD;&#xA;    // Unescape JSON strings&#xD;&#xA;    string UnescapeJsonString(string jsonString)&#xD;&#xA;    {&#xD;&#xA;        if (jsonString.Contains(&quot;\\\&quot;&quot;))&#xD;&#xA;        {&#xD;&#xA;            return jsonString.Replace(&quot;\\\&quot;&quot;, &quot;\&quot;&quot;).Replace(&quot;\\\\&quot;, &quot;\\&quot;).Trim('&quot;');&#xD;&#xA;        }&#xD;&#xA;        else&#xD;&#xA;        {&#xD;&#xA;            return jsonString;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    string unescaped_SpecificContent = UnescapeJsonString(in_SpecificContent);&#xD;&#xA;&#xD;&#xA;    // Deserialize the JSON string into a dictionary&#xD;&#xA;    out_Dictionary = Newtonsoft.Json.JsonConvert.DeserializeObject&lt;Dictionary&lt;string, object&gt;&gt;(unescaped_SpecificContent);&#xD;&#xA;&#xD;&#xA;    // Handle in_AdditionalContent&#xD;&#xA;    if (in_AdditionalContent != null &amp;&amp; in_AdditionalContent.Count &gt; 0)&#xD;&#xA;    {&#xD;&#xA;        foreach (var keyValuePair in in_AdditionalContent)&#xD;&#xA;        {&#xD;&#xA;            string unescapedValue = UnescapeJsonString(keyValuePair.Value);&#xD;&#xA;            object deserializedValue = null;&#xD;&#xA;            bool deserializationSuccess = false;&#xD;&#xA;&#xD;&#xA;            try&#xD;&#xA;            {&#xD;&#xA;                deserializedValue = Newtonsoft.Json.JsonConvert.DeserializeObject(unescapedValue);&#xD;&#xA;                deserializationSuccess = true;&#xD;&#xA;                out_LogMessages.Add($&quot;Successfully deserialized: {keyValuePair.Key}&quot;, UiPath.Core.Activities.LogLevel.Info);&#xD;&#xA;            }&#xD;&#xA;            catch&#xD;&#xA;            {&#xD;&#xA;                deserializedValue = unescapedValue; // If deserialization fails, keep the original value&#xD;&#xA;                out_LogMessages.Add($&quot;Raw value retained: {keyValuePair.Key}. Value used as-is.&quot;, UiPath.Core.Activities.LogLevel.Trace);&#xD;&#xA;            }&#xD;&#xA;&#xD;&#xA;            if (deserializedValue != null)&#xD;&#xA;            {&#xD;&#xA;                // Extract key part after the dot&#xD;&#xA;                string key = keyValuePair.Key.Substring(keyValuePair.Key.IndexOf('.') + 1);&#xD;&#xA;&#xD;&#xA;                if (out_Dictionary.ContainsKey(key))&#xD;&#xA;                {&#xD;&#xA;                    out_Dictionary[key] = deserializedValue;&#xD;&#xA;                    out_LogMessages.Add($&quot;Updated key: {key}&quot;, UiPath.Core.Activities.LogLevel.Info);&#xD;&#xA;                }&#xD;&#xA;                else&#xD;&#xA;                {&#xD;&#xA;                    out_Dictionary.Add(key, deserializedValue);&#xD;&#xA;                    out_LogMessages.Add($&quot;Added key: {key}&quot;, UiPath.Core.Activities.LogLevel.Info);&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    // Set the output argument&#xD;&#xA;    out_SpecificContent = out_Dictionary;&#xD;&#xA;    out_IsSuccess = true;&#xD;&#xA;    out_LogMessages.Add(&quot;Processing completed successfully.&quot;, UiPath.Core.Activities.LogLevel.Info);&#xD;&#xA;}&#xD;&#xA;catch (Exception ex)&#xD;&#xA;{&#xD;&#xA;    out_IsSuccess = false;&#xD;&#xA;    out_ErrorMessage = ex.Message;&#xD;&#xA;    out_LogMessages.Add($&quot;Error: {ex.Message}&quot;, UiPath.Core.Activities.LogLevel.Error);&#xD;&#xA;}&#xD;&#xA;" DisplayName="Invoke Code transform StringToSpecificContent" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+          <ui:InvokeCode.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="in_SpecificContent">[in_SpecificContent]</InArgument>
+            <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_SpecificContent">[io_SpecificContent]</InOutArgument>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_AdditionalContent">[in_AdditionalContent]</InArgument>
+            <OutArgument x:TypeArguments="scg:Dictionary(x:String, ui:LogLevel)" x:Key="out_LogMessages">[LogMessages]</OutArgument>
+            <OutArgument x:TypeArguments="x:Boolean" x:Key="out_IsSuccess">[IsSuccess]</OutArgument>
+            <OutArgument x:TypeArguments="x:String" x:Key="out_ErrorMessage">[ErrorMessage]</OutArgument>
+          </ui:InvokeCode.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeCode>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message ERROR catch System.Exception" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[ErrorMessage &amp; Environment.NewLine &amp; String.Join(Environment.NewLine, LogMessages)]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, ui:LogLevel)" CurrentIndex="{x:Null}" DisplayName="For Each msg in LogMessages" sap:VirtualizedContainerService.HintSize="434,249" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[LogMessages]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, ui:LogLevel)">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, ui:LogLevel)" Name="msg" />
+              </ActivityAction.Argument>
+              <ui:LogMessage sap2010:Annotation.AnnotationText="dynamic loglevel" DisplayName="Log Message dynamic InvokeCode" sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[msg.Value]" Message="[msg.Key]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+      </TryCatch.Finally>
+    </TryCatch>
+    <If Condition="[IsSuccess]" DisplayName="If IsSuccess" sap:VirtualizedContainerService.HintSize="484,281" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <ui:LogMessage DisplayName="Log Message TRACE out_SpecificContent" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[String.Join(&quot;, &quot;, io_SpecificContent.Select(Function(kvp) kvp.Key &amp; &quot;: &quot; &amp; kvp.Value.ToString()))]" />
+      </If.Then>
+    </If>
+    <ui:LogMessage DisplayName="Log Message TRACE end" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[&quot;Finished transforming string to SpecificContent dictionary of String, Object&quot;]" />
+  </Sequence>
+</Activity>
